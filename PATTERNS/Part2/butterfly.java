@@ -1,3 +1,4 @@
+
 public class Basics {
 public static void butterfly(int n ) {
   for(int i=1; i<=n; i++) {
