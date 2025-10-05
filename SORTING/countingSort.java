@@ -1,3 +1,15 @@
+// STEP 1️⃣: Find the largest element in the array (to know range)
+
+// STEP 2️⃣: Create a count array of size (largest + 1)
+
+// STEP 3️⃣: Count the frequency of each element in the input array
+
+// STEP 4️⃣: Traverse count array → for each number, 
+//           fill it in the original array according to its frequency
+
+// STEP 5️⃣: Print the sorted array
+
+
 import java.util.*;
 import java.util.Arrays;
 
