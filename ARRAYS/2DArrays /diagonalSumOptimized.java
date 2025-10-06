@@ -8,7 +8,7 @@ public class Array {
      //primary diagonal 
      sum += matrix[i][i];
      //secondary diagonal 
-     if(i != matrix.length-1-i)
+     if(i != matrix.length-1-i) // to avoid double counting
      sum += matrix[i][matrix.length-i-1];
      }
 
