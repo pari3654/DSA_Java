@@ -2,8 +2,8 @@ import java.util.*;
 
 public class bitManipulation {
   public static int clearIthBit(int n , int i) {
-    int bitmask = 1<<i;
-    return n & (~(bitmask));
+    int bitmask = ~(1<<i);
+    return n & bitmask;
   }
    
 
