@@ -18,7 +18,7 @@ public static void printSpiral(int matrix[][]) {
 
         // bottom
         for (int j = endCol - 1; j >= startCol; j--) {
-            if (startRow == endRow) {
+            if (startRow == endRow) { // is condition se value repeat nhi hoti hai 
                 break;
             }
             System.out.print(matrix[endRow][j] + " ");
