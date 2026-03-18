@@ -5,7 +5,7 @@ class Solution {
         // Edge case: 0 ya 1 node → kuch karna hi nahi
         if (head == null || head.next == null) return;
 
-        // 🔹 STEP 1: Find Middle using slow-fast pointer
+        //  STEP 1: Find Middle using slow-fast pointer
         ListNode slow = head;
         ListNode fast = head;
 
@@ -15,7 +15,7 @@ class Solution {
             fast = fast.next.next;
         }
 
-        // 🔹 STEP 2: Reverse second half
+        //  STEP 2: Reverse second half
         ListNode curr = slow.next; // mid ke baad wali list
         slow.next = null; // list ko break kar diya
 
@@ -32,7 +32,7 @@ class Solution {
 
         // ab prev = reversed list ka head hai
 
-        // 🔹 STEP 3: Zig-Zag Merge
+        //  STEP 3: Zig-Zag Merge
         ListNode left = head;   // first half
         ListNode right = prev;  // reversed second half
 
