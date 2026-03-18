@@ -33,21 +33,23 @@ class Solution {
         return slow;
     }
 
-    // merge using dummy node
-    private ListNode merge(ListNode l1, ListNode l2) {
+    //merge function 
+     private ListNode merge(ListNode head1, ListNode head2) {
         ListNode dummy = new ListNode(-1);
         ListNode temp = dummy;
 
-        while (l1 != null && l2 != null) {
-            if (l1.val <= l2.val) {
-                temp.next = l1;
-                l1 = l1.next;
+        while (head1 != null && head2 != null) {
+            if (head1.val <= head2.val) {
+                temp.next = head1;
+                head1 = head1.next;
+                temp = temp.next;
             } else {
-                temp.next = l2;
-                l2 = l2.next;
+                temp.next = head2;
+                head2 = head2.next;
+                temp = temp.next;
             }
-            temp = temp.next;
         }
+
 
         if (l1 != null) temp.next = l1;
         else temp.next = l2;
