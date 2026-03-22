@@ -11,6 +11,9 @@ public class Stacks {
 
         // pop
         public static int pop() {
+            if (isEmpty()) {
+                return -1;
+            }
             int top = list.get(list.size() - 1);
             list.remove(list.size() - 1);
             return top;
@@ -18,6 +21,9 @@ public class Stacks {
 
         // peek
         public static int peek() {
+            if (isEmpty()) {
+                return -1;
+            }
             return list.get(list.size() - 1);
         }
 
@@ -28,7 +34,7 @@ public class Stacks {
     }
 
     public static void main(String args[]) {
-        Stack s = new Stack(); 
+        Stack s = new Stack();
         s.push(1);
         s.push(2);
         s.push(3);
