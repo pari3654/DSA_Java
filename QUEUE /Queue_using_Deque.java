@@ -1,0 +1,41 @@
+import java.util.*;
+
+class Queue {
+    Deque<Integer> deque = new LinkedList<>();
+
+    // add (enqueue)
+    public void add(int data) {
+        deque.addLast(data);
+    }
+
+    // remove (dequeue)
+    public int remove() {
+        return deque.removeFirst();
+    }
+
+    // peek
+    public int peek() {
+        return deque.getFirst();
+    }
+
+    // isEmpty
+    public boolean isEmpty() {
+        return deque.isEmpty();
+    }
+}
+
+public class Queues {
+    public static void main(String args[]) {
+        Queue q = new Queue();
+
+        q.add(1);
+        q.add(2);
+        q.add(3);
+
+        System.out.println("peek = " + q.peek());
+
+        System.out.println(q.remove());
+        System.out.println(q.remove());
+        System.out.println(q.remove());
+    }
+}
