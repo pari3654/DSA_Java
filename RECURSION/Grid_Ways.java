@@ -7,7 +7,7 @@ public class Classroom {
         }
 
         // boundary cross
-        if (i == n || j == m) {
+        else if (i == n || j == m) {
             return 0;
         }
 
