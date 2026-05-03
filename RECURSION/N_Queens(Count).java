@@ -34,7 +34,8 @@ public class NQueensCount {
 
                 board[row][j] = 'Q';
 
-                count += nQueens(board, row + 1);
+                nQueens(board, row + 1);
+                count++;
 
                 board[row][j] = 'x'; // backtrack
             }
