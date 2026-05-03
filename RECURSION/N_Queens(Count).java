@@ -1,5 +1,7 @@
 public class NQueensCount {
 
+    static int count = 0; // to track counts
+
     public static boolean isSafe(char board[][], int row, int col) {
 
         // vertical up
@@ -20,28 +22,25 @@ public class NQueensCount {
         return true;
     }
 
-    public static int nQueens(char board[][], int row) {
+    public static void nQueens(char board[][], int row) {
 
         // base case
         if (row == board.length) {
-            return 1;
+            count++;   // solution fount
+            return;
         }
 
-        int count = 0;
-
+        // column loop
         for (int j = 0; j < board.length; j++) {
             if (isSafe(board, row, j)) {
 
                 board[row][j] = 'Q';
 
                 nQueens(board, row + 1);
-                count++;
 
                 board[row][j] = 'x'; // backtrack
             }
         }
-
-        return count;
     }
 
     public static void main(String args[]) {
@@ -55,7 +54,8 @@ public class NQueensCount {
             }
         }
 
-        int ways = nQueens(board, 0);
-        System.out.println("Total ways = " + ways);
+        nQueens(board, 0);
+
+        System.out.println("Total ways = " + count);
     }
 }
